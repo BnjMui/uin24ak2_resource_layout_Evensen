@@ -94,3 +94,14 @@ const resources = [
         ]
     },
 ]
+
+//Starter med å skrive ut kategoriene i navigasjonen
+const category = document.getElementById("category")
+
+resources.map(element =>{
+    category.innerHTML += `<li><a href="#">${element.category}</a></li>`
+})
+
+//Article kortet
+const article = document.getElementById("article")
+
