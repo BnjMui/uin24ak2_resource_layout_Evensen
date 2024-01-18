@@ -102,7 +102,7 @@ function categories(){
     let categoriesHTML = ""
     resources.map(element =>{
         teller++
-        categoriesHTML += `<li> <button onclick="content(${teller})">${element.category}</button> </li>`
+        categoriesHTML += `<li> <button id="${teller}" onclick="content(${teller})">${element.category}</button> </li>`
     })
     category.innerHTML = categoriesHTML
 }
@@ -110,13 +110,21 @@ categories()
 //Henter article id.
 const article = document.getElementById("article")
 function content(id){
+//Kode for å fjerne "active" fra alle buttons hentet jeg 10/01/2024, fra https://medium.com/coding-beauty/javascript-remove-class-from-all-elements-aed7b7b4a14e
+    const buttonClass = document.querySelectorAll("button")
+    buttonClass.forEach((element) =>{
+        element.classList.remove("active")
+    })
+
+
+    document.getElementById(`${id}`).classList.add("active")
     teller = 0
     resources.map(element =>{
         teller++
         if(teller == id){
             let listHTML = ""
             article.innerHTML = `<h2>${element.category}</h2>
-                                <p>${element.text}</p>`
+            <p>${element.text}</p>`
             
             
             element.sources.map(sources =>{
@@ -126,4 +134,4 @@ function content(id){
         }
     })
 }
-content(2)
+content(1)

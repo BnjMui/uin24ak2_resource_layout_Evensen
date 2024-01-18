@@ -4,37 +4,75 @@
 :root {
     --darkblue: #2a324b;
     --lightblue: #58699D;
+    --darkwhite: #E1E5EE;
     --white: #fff;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: #fefefe;
-}
-/* h1 {
-    display: flex;
-    width: 100%;
-    padding: 1.5rem 1rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: darkgray;;
-    font-weight: 700;
-    margin: auto 0.3rem 1.5rem 0.3rem;
-} */
-#category {
+    background-color: var(--darkwhite);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 5rem;
+}
+/*Lager kategoriknapper/navigasjon.*/
+nav {
+    width: 100%;
+    max-width: 1080px;
+}
+#category {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
+    margin: 0;
     list-style-type: none;
 }
+
+.active {
+    background-color: var(--white);
+    color: black;
+}
+
 #category button {
     display: inline-block;
     padding: 1.5rem 3rem;
-    margin: auto 1rem;
+    margin: auto 0;
     color: var(--white);
     font-family: "montserrat";
     text-decoration: none;
     font-weight: 700;
+    font-size: large;
     background-color: #2a324b;
     border: 0;
 }
+/*Hover funksjon funnet 19/01/2024, på https://stackoverflow.com/questions/3087975/how-to-change-the-cursor-into-a-hand-when-a-user-hovers-over-a-list-item*/
+button:hover {
+    cursor: pointer;
+}
+
+/*Styler article og tekst*/
+main {
+    max-width: 1080px;
+    width: 100%;
+}
+article {
+    width: 100%;
+    background-color: var(--white);
+    
+}
+article h2 {
+    margin: 0;
+    padding: 6rem 2rem 1rem 3rem;
+}
+article p {
+    padding: 1rem 2rem 1rem 3rem;
+    margin: 0;
+}
+article ul {
+    margin: 0;
+    padding: 1rem 2rem 6rem 6rem;
+}
+
