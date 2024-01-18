@@ -27,12 +27,14 @@ body {
     padding: 0;
     list-style-type: none;
 }
-#category a {
+#category button {
     display: inline-block;
     padding: 1.5rem 3rem;
     margin: auto 1rem;
     color: var(--white);
+    font-family: "montserrat";
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     background-color: #2a324b;
+    border: 0;
 }

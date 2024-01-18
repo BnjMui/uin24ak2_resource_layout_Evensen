@@ -97,11 +97,33 @@ const resources = [
 
 //Starter med å skrive ut kategoriene i navigasjonen
 const category = document.getElementById("category")
-
-resources.map(element =>{
-    category.innerHTML += `<li><a href="#">${element.category}</a></li>`
-})
-
-//Article kortet
+function categories(){
+    let teller = 0
+    let categoriesHTML = ""
+    resources.map(element =>{
+        teller++
+        categoriesHTML += `<li> <button onclick="content(${teller})">${element.category}</button> </li>`
+    })
+    category.innerHTML = categoriesHTML
+}
+categories()
+//Henter article id.
 const article = document.getElementById("article")
-
+function content(id){
+    teller = 0
+    resources.map(element =>{
+        teller++
+        if(teller == id){
+            let listHTML = ""
+            article.innerHTML = `<h2>${element.category}</h2>
+                                <p>${element.text}</p>`
+            
+            
+            element.sources.map(sources =>{
+                listHTML += `<li> <a href="${sources.url}">${sources.title}</a></li>`
+            })
+            article.innerHTML += `<ul>${listHTML}</ul>`
+        }
+    })
+}
+content(2)
