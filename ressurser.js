@@ -115,8 +115,7 @@ function content(id){
     buttonClass.forEach((element) =>{
         element.classList.remove("active")
     })
-
-
+    
     document.getElementById(`${id}`).classList.add("active")
     teller = 0
     resources.map(element =>{

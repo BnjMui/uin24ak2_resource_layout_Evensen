@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-
 :root {
     --darkblue: #2a324b;
     --lightblue: #58699D;
@@ -16,11 +15,13 @@ body {
     justify-content: center;
     margin: 5rem;
 }
+
 /*Lager kategoriknapper/navigasjon.*/
 nav {
     width: 100%;
     max-width: 1080px;
 }
+
 #category {
     display: flex;
     width: 100%;
@@ -31,12 +32,7 @@ nav {
     list-style-type: none;
 }
 
-.active {
-    background-color: var(--white);
-    color: black;
-}
-
-#category button {
+button {
     display: inline-block;
     padding: 1.5rem 3rem;
     margin: auto 0;
@@ -48,9 +44,20 @@ nav {
     background-color: #2a324b;
     border: 0;
 }
+
+/*Kode for å highlighte kategorien man er inne på*/
+.active {
+    background-color: var(--white);
+    color: black;
+}
+
 /*Hover funksjon funnet 19/01/2024, på https://stackoverflow.com/questions/3087975/how-to-change-the-cursor-into-a-hand-when-a-user-hovers-over-a-list-item*/
 button:hover {
     cursor: pointer;
+    background-color: var(--white);
+    color: black;
+
+    text-decoration: underline; /*Forslag fra medstudent for å gjøre siden mer UU-vennlig*/
 }
 
 /*Styler article og tekst*/
@@ -63,14 +70,17 @@ article {
     background-color: var(--white);
     
 }
+
 article h2 {
     margin: 0;
     padding: 6rem 2rem 1rem 3rem;
 }
+
 article p {
     padding: 1rem 2rem 1rem 3rem;
     margin: 0;
 }
+
 article ul {
     margin: 0;
     padding: 1rem 2rem 6rem 6rem;
